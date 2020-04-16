@@ -3,8 +3,9 @@ const $         = require('cheerio');
 const telegram  = require('telegram-bot-api');
 const CronJob   = require('cron').CronJob;
 
-const tgram  = require('./details').telegram;
-const url    = 'https://www.amazon.co.uk/gp/offer-listing/B081W4XHMZ/ref=olp_twister_all?ie=UTF8&mv_edition=all&mv_platform_for_display=0';
+const tgram  = require('./topsecret').telegram;
+// const url    = 'https://www.amazon.co.uk/gp/offer-listing/B081W4XHMZ/ref=olp_twister_all?ie=UTF8&mv_edition=all&mv_platform_for_display=0';
+const url    = 'https://www.amazon.co.uk/gp/offer-listing/B081W4XHMZ/ref=olp_f_new?ie=UTF8&mv_edition=all&mv_platform_for_display=0&&f_new=true';
 const domain = 'Amazon.co.uk';
 
 (async () => {
@@ -46,6 +47,7 @@ async function checkPrice(page) {
 
         if (value < 360) {
             console.log("BUY!!!! " + value);
+            //olpSellerName
             sendNotification(value);
         }
     });

@@ -24,6 +24,7 @@ const screenshot = 'amz.png';
 async function configureBrowser() {
     const browser = await puppeteer.launch({headless: true});
     const page = await browser.newPage();
+    await page.setUserAgent('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36');s
     await page.goto(url);
     return page;
 }
@@ -49,13 +50,13 @@ async function configureBrowser() {
 //     return page;
 // }
 
-// async function purchase(page) {
-//     page = logIn(page);
-//     await page.waitForSelector('#nav-tools')
-//     indicator = $('#nav-tools > .nav-line-1').text();
-//     console.log(indicator);
-//     // await page.screenshot({path: screenshot});
-// }
+async function purchase(page) {
+    page = logIn(page);
+    await page.waitForNavigation();
+    let html = await page.evaluate(() => document.body.innerHTML);
+    console.log(html);
+    // await page.screenshot({path: screenshot});
+}
 
 async function checkPrice(page) {
     // await page.reload();
