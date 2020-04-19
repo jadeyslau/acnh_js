@@ -3,7 +3,7 @@ const $         = require('cheerio');
 const telegram  = require('telegram-bot-api');
 const CronJob   = require('cron').CronJob;
 
-const tgram  = require('./topsecret').telegram;
+const topsecret = require('./topsecret');
 
 const url = 'https://www.currys.co.uk/gbuk/s_action/compare/10206234-10206236-10206237-10206235.html'
 // const url = 'https://www.currys.co.uk/gbuk/s_action/compare/10198827-10198832-10198830-10163022.html'
@@ -62,11 +62,11 @@ async function checkAvailability(page) {
 
 async function sendNotification() {
       var api = new telegram({
-        token: tgram.telegram_token
+        token: topsecret.telegram_token
       });
 
       api.sendMessage({
-          chat_id: tgram.telegram_chat_id,
+          chat_id: topsecret.telegram_chat_id,
           text: 'In stock: '+url,
       });
 }
