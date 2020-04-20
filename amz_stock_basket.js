@@ -89,9 +89,12 @@ async function checkOut(page){
 
   await page.click('#hlb-ptc-btn-native');
   await page.waitForNavigation();
-  // await page.waitForSelector('input#ap_password');
-  // await page.type('input#ap_password', topsecret.pass);
-  // await page.click('#signInSubmit');
+
+  if ($('input#ap_password').length){
+    await page.type('input#ap_password', topsecret.pass);
+    await page.click('#signInSubmit');
+    await page.waitForNavigation();
+  };
 
   //check order total
   let html = await page.evaluate(() => document.body.innerHTML);
