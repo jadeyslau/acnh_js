@@ -5,7 +5,7 @@ const CronJob   = require('cron').CronJob;
 
 const topsecret = require('./topsecret');
 
-const url = 'https://www.amazon.co.uk/gp/offer-listing/B081W4XHMZ/ref=olp_f_new?ie=UTF8&mv_edition=all&mv_platform_for_display=0&qid=1587143207&sr=8-1&f_new=true'
+const url = topsecret.amz_url;
 // const url = 'https://www.amazon.co.uk/gp/offer-listing/0825640172/ref=olp_f_primeEligible?ie=UTF8&qid=&sr=&f_new=true&f_primeEligible=true'
 // const url = 'https://www.amazon.co.uk/gp/offer-listing/0825640172/ref=olp_f_usedGood?ie=UTF8&qid=&sr=&f_freeShipping=true&f_usedGood=true'
 const screenshot = 'amz.png';

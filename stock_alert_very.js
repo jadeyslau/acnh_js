@@ -4,7 +4,7 @@ const telegram  = require('telegram-bot-api');
 const CronJob   = require('cron').CronJob;
 
 const topsecret = require('./topsecret');
-const url    = 'https://www.very.co.uk/nintendo-switch-nintendo-switch-animal-crossing-new-horizons-edition-console/1600456594.prd';
+const url = topsecret.very_url;
 // const url    = 'https://www.very.co.uk/nintendo-switch-lite-switch-lite-console-yellow/1600394797.prd';
 const domain = 'Very.co.uk';
 

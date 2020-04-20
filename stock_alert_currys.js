@@ -5,8 +5,7 @@ const CronJob   = require('cron').CronJob;
 
 const topsecret = require('./topsecret');
 
-const url = 'https://www.currys.co.uk/gbuk/s_action/compare/10206234-10206236-10206237-10206235.html'
-// const url = 'https://www.currys.co.uk/gbuk/s_action/compare/10198827-10198832-10198830-10163022.html'
+const url = topsecret.currys_url;
 const domain = 'Currys.co.uk';
 
 (async () => {

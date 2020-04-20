@@ -4,8 +4,8 @@ const telegram  = require('telegram-bot-api');
 const CronJob   = require('cron').CronJob;
 
 const topsecret = require('./topsecret');
-const url    = 'https://www.johnlewis.com/nintendo-switch-1-1-console-with-animal-crossing-new-horizons-game-bundle/p4918594';
-// const url    = 'https://www.very.co.uk/nintendo-switch-lite-switch-lite-console-yellow/1600394797.prd';
+
+const url = topsecret.jl_url;
 const domain = 'johnlewis.co.uk';
 
 (async () => {

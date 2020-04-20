@@ -4,8 +4,8 @@ const telegram  = require('telegram-bot-api');
 const CronJob   = require('cron').CronJob;
 
 const topsecret = require('./topsecret');
-// const url    = 'https://www.amazon.co.uk/gp/offer-listing/B081W4XHMZ/ref=olp_twister_all?ie=UTF8&mv_edition=all&mv_platform_for_display=0';
-const url    = 'https://www.amazon.co.uk/gp/offer-listing/B081W4XHMZ/ref=olp_f_new?ie=UTF8&mv_edition=all&mv_platform_for_display=0&&f_new=true';
+
+const url = topsecret.amz_url;
 const domain = 'Amazon.co.uk';
 
 (async () => {
